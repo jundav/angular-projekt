@@ -1,0 +1,33 @@
+
+<div class="m-5 row row-cols-1 row-cols-md-4">
+<div *ngFor="let productdk of productcatalogdk | async">
+  
+    <div class="col mb-4 align-items-center">
+
+        <div class="card">
+
+            <div class="view overlay">   
+                <a [routerLink]="'/products/' + productdk._id">               
+                    <img class="card-img-top imgstyle" src={{productdk.image}} alt="product"/>                    
+                    <div class="mask rgba-white-slight"></div>                  
+                </a>
+            </div>
+          
+            <div class="card-body text-center">                        
+                <a [routerLink]="'/products/' + productdk._id">
+                    <h4 class="card-title">{{productdk.name}}</h4>
+                </a>                        
+                <p class="card-text">{{productdk.short}}</p>      
+                <p> {{productdk.price}} SEK</p>      
+                <button class="btn btn-dark btn-sm">
+                    <a [routerLink]="'/products/' + productdk._id">Read more</a>
+                </button>
+            </div>
+
+        </div>            
+        
+    </div>
+  </div>
+</div>
+
+

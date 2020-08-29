@@ -1,0 +1,35 @@
+
+            
+     
+        <div class="p-8">
+            <h5>Shopping Cart</h5>
+            
+            <div *ngFor="let item of shoppingcartdk">
+                
+                <div >
+                    <div><strong>{{ item.product.name }}</strong></div>
+                    <img class="img-width" src={{item.product.image}} alt="Product Image"/>
+                    <div class="text-muted">{{ item.quantity }} x {{ item.product.price }}</div>
+                </div>                
+                <div >
+                    <button class="btn btn-sm white-text btn-dark" (click)="increment(item);$event.stopPropagation()">+</button>
+                    <button class="btn btn-sm white-text btn-dark" (click)="decrement(item);$event.stopPropagation() ">-</button>
+                </div>
+                
+            </div>
+        </div>
+            <div *ngIf= "quantitydk >= 1" >                
+                <p> Total Amount: {{ amountdk }}</p>
+                <p> Total Quantity: {{quantitydk}}</p>
+                <div>
+                    <button class="btn btn-danger" (click)="clearCart();$event.stopPropagation()">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                </div>
+               
+            </div>                
+                    <!-- <button type="button" class="btn btn-dark blue-grey lighten-1 btn-sm" (click)="addToCart(item.product, 1)" > Add To Cart</button>
+                    <button class="btn btn-danger"><i class="far fa-trash-alt" (click)="removeFromCart(item.product.id)"></i></button> -->                
+            
+        
+    

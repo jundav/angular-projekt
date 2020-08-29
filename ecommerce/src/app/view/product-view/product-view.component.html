@@ -1,0 +1,48 @@
+
+<div class="container my-5 py-5 z-depth-1">
+
+    <section class="text-center">
+        <div class="row">
+          <div class="col-lg-6">
+              <div class="carousel-inner text-center text-md-left" role="listbox">
+                <div class="carousel-item active">
+                  <img src={{productdk.image}} alt="Product Detail" class="img-fluid imgStyleDesc" />
+                </div>
+              </div>
+          </div>
+          <div class="col-lg-5 text-center text-md-left mt-5">
+            <h2 class="h1-responsive text-center text-md-left product-name font-weight-bold mb-4 ml-xl-0 ml-4">
+              <strong>{{productdk.name}}</strong>
+            </h2>
+            <h4 class="h4-responsive text-center text-md-left mb-4 ml-xl-0 ml-4">{{productdk.shortDescription}}</h4>
+            <h3 class="h3-responsive text-center text-md-left mb-5 ml-xl-0 ml-4">
+              <span class="font-weight-bold dark-grey-text">
+                <strong>{{productdk.price}} :-</strong>
+              </span>
+            </h3>
+            <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+              <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Description</h5>
+                </div>
+                <div>
+                <div class="card-body">{{productdk.description}}</div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-4">
+              <button type="button" class="btn btn-dark blue-grey lighten-1 btn-lg" (click)="addToCart(productdk, 1)" > Add To Cart</button>
+              </div>              
+            </div>
+          </div> 
+        </div>
+    </section>
+  </div>
+
+
+
+
+
+
+
+
+
